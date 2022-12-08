@@ -1,0 +1,123 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ececec;
+}
+.header__logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  color: #000000;
+  letter-spacing: 0.03em;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: #000000;
+  }
+}
+
+.header__text {
+  color: var(--accent-color);
+}
+
+/* Menu nav - contact-nav */
+.menu-nav__list {
+  display: flex;
+  margin-left: 93px;
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.menu-nav__link {
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: transparent;
+  }
+}
+
+.menu-nav__item_active {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 47px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+}
+
+.menu-nav__item + .menu-nav__item {
+  margin-left: 50px;
+}
+
+.menu-nav__link,
+.contact-nav__link,
+.header__logo {
+  text-decoration: none;
+  color: inherit;
+  transition: color 250ms var(--transition-timing-function);
+}
+
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.contact-nav__list {
+  display: flex;
+}
+
+.contact-nav__link {
+  color: var(--primary-text-color);
+}
+
+.contact-nav__link {
+  &:hover,
+  &:focus .contact-nav__icon {
+    transition: fill 250ms var(--transition-timing-function);
+  }
+}
+
+.contact-nav__item + .contact-nav__item {
+  margin-left: 50px;
+}
+
+.contact-nav__link {
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: transparent;
+  }
+}
+
+.contact-nav__link {
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    background-color: transparent;
+  }
+}
+
+.contact-nav__icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: rgb(117, 117, 117);
+}
+
+.menu-nav__link,
+.contact-nav__link {
+  display: block;
+}

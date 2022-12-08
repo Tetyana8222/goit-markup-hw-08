@@ -1,0 +1,31 @@
+.features__set {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  padding-left: 0px;
+}
+
+.features__box {
+  display: flex;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--primary-text-color);
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.features__icon {
+  display: inline-block;
+  margin: 25px 100px;
+}
