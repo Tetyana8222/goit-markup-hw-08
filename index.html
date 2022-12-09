@@ -20,7 +20,13 @@
     <header class="header">
       <div class="container header">
         <a href="/" class="header__logo" lang="en"><span class="header__text">Web</span>Studio</a>
-        <nav class="menu-nav">
+         <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключаель моб">
+          <use class="icon-cross" href="./images/symbol.defs.svg#icon-close_menu"></use>
+        <use class="icon-menu" href="./images/symbol.defs.svg#icon-menu"></use></svg>
+         </button>
+
+        <!-- <nav class="menu-nav">
           <ul class="menu-nav__list list">
             <li class="menu-nav__item menu-nav__item_active">
               <a href="./index.html" class="menu-nav__link">Студія</a>
@@ -32,8 +38,8 @@
               <a href="./contacts.html" class="menu-nav__link"></a>Контакти
             </li>
           </ul>
-        </nav>
-       <div class="contact-nav">
+        </nav> -->
+       <!-- <div class="contact-nav">
         <ul class="contact-nav__list list">
           <li class="contact-nav__item">
             <a href="tel:+380961111111" class="contact-nav__link">
@@ -50,7 +56,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
       </div>
     </header>
     <main>
@@ -403,14 +409,15 @@
       </section> -->
     </main>
     <!--Footer-->
-    <!-- <footer class="footer">
+     <footer class="footer">
       <div class="container container__footer">
         <div class="footer__wrapper">
+          <div class="footer__unit">
           <div class="footer__address">
             <a href="/" class="footer__logo" lang="en"
               ><span class="footer__text">Web</span><span>Studio</span>
             </a>
-            <address class="footer__address">
+            <address class="footer__location">
               <a class= "footer__map"
                 href="https://googl/maps/6CNPFLYPUQr8JQg6A"
                 target="_blank"
@@ -455,6 +462,7 @@
               </li>
             </ul>
           </div>
+          </div>
           <div class="subscribe">
             <h2 class="subscribe__title title">Підпишіться на розсилку</h2>
             <form class="subscribe__buttons" action="subscribe">
@@ -487,7 +495,7 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="backdrop__modal">
         <button class="backdrop__button button" type="button" data-modal-close>

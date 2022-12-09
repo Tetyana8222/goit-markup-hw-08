@@ -23,6 +23,12 @@
   color: var(--accent-color);
 }
 
+.menu-button {
+  border: none;
+  background-color: inherit;
+  margin-left: 200px;
+  color: #000000;
+}
 /* Menu nav - contact-nav */
 .menu-nav__list {
   display: flex;
