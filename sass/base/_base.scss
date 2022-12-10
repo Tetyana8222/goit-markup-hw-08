@@ -13,18 +13,46 @@ body {
   background-color: var(--accent-color2);
   color: var(--primary-title-color);
 }
+
+$breakpoints: (
+  "phone": 480px,
+  "tablet": 768px,
+  "desktop": 1200px,
+);
+
 .container {
-  width: 480px;
-  // width: 1200px;
+  width: 100vw;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  // phone screen
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  // tablet sreen
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  // desktop screen
+  @media screen and (min-width: 1200) {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .list {
