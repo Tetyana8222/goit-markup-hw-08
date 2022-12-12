@@ -90,12 +90,19 @@ body {
 .heading {
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .heading {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
 }
 
 .title {
@@ -749,29 +756,28 @@ li.team__item {
 
 .customer {
   background-color: var(--accent-color2);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .customer__list {
+  gap: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 0;
 }
 
 .customer__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -792,6 +798,16 @@ li.team__item {
   fill: var(--accent-color);
   -webkit-transition: fill var(--general-transition-duration) var(--transition-timing-function);
   transition: fill var(--general-transition-duration) var(--transition-timing-function);
+}
+@media screen and (min-width: 768px) {
+  .customer__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customer__link {
+    width: 170px;
+  }
 }
 
 .customer__icon {
