@@ -33,13 +33,22 @@
 
 /* Menu nav - contact-nav */
 .menu-nav__list {
-  display: none;
-  // display: flex;
-  // margin-left: 93px;
-  // padding-top: 0;
-  // padding-left: 0;
-  // padding-bottom: 0;
+  display: flex;
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  @media screen and (min-width: 768px) {
+    margin-left: 88px;
+    margin-right: 90px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 315px;
+    margin-left: 90px;
+  }
 }
+// margin-left: 93px;
 
 .menu-nav__link {
   &:hover,
@@ -67,7 +76,9 @@
 }
 
 .menu-nav__item + .menu-nav__item {
-  margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+  }
 }
 
 .menu-nav__link,
@@ -79,15 +90,27 @@
 }
 
 .contact-nav {
-  display: none;
-  // display: flex;
-  // margin-left: auto;
-  // padding-top: 0;
-  // padding-bottom: 0;
+  display: flex;
+  margin-left: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contact-nav__list {
-  display: flex;
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .contact-nav__link {
@@ -100,9 +123,25 @@
     transition: fill 250ms var(--transition-timing-function);
   }
 }
-
+.contact-nav__item {
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
 .contact-nav__item + .contact-nav__item {
-  margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+  }
+}
+.contact-nav__item:last-child {
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 .contact-nav__link {
@@ -123,11 +162,25 @@
 
 .contact-nav__icon {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 8px;
+  // margin-right: 10px;
   color: rgb(117, 117, 117);
+  @media screen and(min-width:1200px) {
+    margin-right: 10px;
+  }
 }
-
-.menu-nav__link,
+.contact-nav__item:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+}
 .contact-nav__link {
-  display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
+// .menu-nav__link,
+// .contact-nav__link {
+//   display:flex
+//   // display: block;
+// }

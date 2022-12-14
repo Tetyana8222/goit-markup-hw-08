@@ -403,7 +403,26 @@ body {
 
 /* Menu nav - contact-nav */
 .menu-nav__list {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .menu-nav__list {
+    margin-left: 88px;
+    margin-right: 90px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-nav__list {
+    margin-right: 315px;
+    margin-left: 90px;
+  }
 }
 
 .menu-nav__link:hover, .menu-nav__link:focus {
@@ -428,8 +447,10 @@ body {
   color: var(--accent-color);
 }
 
-.menu-nav__item + .menu-nav__item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .menu-nav__item + .menu-nav__item {
+    margin-left: 50px;
+  }
 }
 
 .menu-nav__link,
@@ -442,13 +463,43 @@ body {
 }
 
 .contact-nav {
-  display: none;
-}
-
-.contact-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .contact-nav {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .contact-nav__link {
@@ -460,8 +511,27 @@ body {
   transition: fill 250ms var(--transition-timing-function);
 }
 
-.contact-nav__item + .contact-nav__item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .contact-nav__item {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-nav__item {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-nav__item + .contact-nav__item {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-nav__item:last-child {
+    margin-left: 30px;
+  }
 }
 
 .contact-nav__link:hover, .contact-nav__link:focus {
@@ -476,13 +546,27 @@ body {
 
 .contact-nav__icon {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 8px;
   color: rgb(117, 117, 117);
 }
+@media screen and (min-width: 1200px) {
+  .contact-nav__icon {
+    margin-right: 10px;
+  }
+}
 
-.menu-nav__link,
-.contact-nav__link {
-  display: block;
+@media screen and (max-width: 1199px) {
+  .contact-nav__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-nav__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .menu {
@@ -513,6 +597,10 @@ body {
   margin-bottom: 36px;
 }
 
+.mobile-menu__item:hover .mobile-menu__link {
+  color: var(--accent-color);
+}
+
 .mobile-menu__link {
   color: rgb(33, 33, 33);
 }
@@ -527,6 +615,10 @@ body {
 
 .mobile-contacts__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.mobile-contacts__item:hover .mobile-contacts__link {
+  color: var(--accent-color);
 }
 
 .mobile-socials {
@@ -553,9 +645,13 @@ body {
   text-decoration: underline;
 }
 
+.menu__icon {
+  padding: 12px 8px;
+}
+
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+  height: 40px;
+  width: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,7 +662,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: auto;
-  padding: 0;
+  padding: 0px;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -580,8 +676,8 @@ body {
   }
 }
 .menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+.menu-toggle:focus .icon-menu__close {
+  fill: var(--accent-color);
 }
 
 .menu-container {
@@ -599,7 +695,7 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
+  background-color: var(--accent-color2);
   z-index: 999;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -612,13 +708,12 @@ body {
 .menu-container.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  background-color: var(--accent-color2);
 }
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 10px;
+  right: 15px;
   color: #fff;
 }
 
