@@ -76,7 +76,7 @@
 }
 
 .menu-nav__item + .menu-nav__item {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     margin-left: 50px;
   }
 }
