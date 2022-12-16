@@ -42,15 +42,14 @@
 }
 
 .hero__title {
-  @media screen and (min-width: 480px) {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-color2);
+  margin: 0;
+  // padding-top: 200px;
+  // padding-bottom: 30px;
+  @media screen and (max-width: 1199px) {
     font-size: 26px;
-    // font-size: 44px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent-color2);
-    margin: 0;
-    // padding-top: 200px;
-    // padding-bottom: 30px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 44px;
