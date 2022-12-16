@@ -139,7 +139,7 @@
         </div>
       </section>
       <!--What we do-->
-      <!-- <section class="section work">
+      <section class="section work">
         <div class="container work__container">
           <h2 class="work__heading heading">Чим ми займаємося</h2>
           <ul class="work__gallery">
@@ -148,6 +148,7 @@
                 <div class="work__thumb">
                   <img
                     class="work__card"
+                    srcset="./images/wwd1.jpg 1x, ./images/wwd-1@2x.jpg 2x"
                     src="./images/wwd1.jpg"
                     alt="HTML"
                     width="370"
@@ -161,6 +162,7 @@
                 <div class="work__thumb">
                   <img
                     class="work__card"
+                    srcset="./images/wwd2.jpg x1, ./images/wwd-2@2x.jpg 2x"
                     src="./images/wwd2.jpg"
                     alt="CSS"
                     width="370"
@@ -174,33 +176,40 @@
                 ><div class="work__thumb">
                   <img
                     class="work__card"
+                    srcset="./images/wwd3.jpg 1x, ./images/wwd-3@2x.jpg 2x"
                     src="./images/wwd3.jpg"
                     alt="JavaScript"
                     width="370"
                   />
                   <p class="work__label">Дизайнерські рішення</p>
-                </div></a>
+                </div></a
+              >
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Our Team-->
-      <!-- <section class="section team">
+      <section class="section team">
         <div class="container team__container">
           <h2 class="team__heading heading">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
               <a href="#">
-                <img
-                  src="./images/member1.jpg"
-                  alt="фото члена команди"
-                  width="270"
-                  class="team__img"
+                <picture>
+                  <source srcset="./images/member1-270.jpg 1x, ./images/member1-540.jpg 2x" media="(min-width:1200px)">
+                  <source srcset="./images/member1-354.jpg 1x, ./images/member1-708.jpg 2x" media=" (min-width:768px)">
+                  <source srcset="./images/member1-450.jpg 1x, ./images/member1-900.jpg 2x" media="(max-width=767px)">
+                <img class="team__img" 
+                alt="фото члена команди"  
+                
+                src="./images/member1-270.jpg"
               /></a>
+              
               <div class="team__wrapper">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__position">Product Designer</p>
               </div>
+            </picture>
               <ul class="team__networks list">
                 <li class="team__network">
                   <a href="/" class="team__link">
@@ -234,16 +243,22 @@
             </li>
             <li class="team__item">
               <a href="#">
-                <img
-                  src="./images/member2.jpg"
+              <picture> 
+               <source srcset="./images/member2-270.jpg 1x, ./images/member2-540.jpg 2x" media="(min-width:1200px)">
+                  <source srcset="./images/member2-354.jpg 1x, ./images/member2-708.jpg 2x" media=" (min-width:768px)">
+                  <source srcset="./images/member2-450.jpg 1x, ./images/member2-900.jpg 2x" media="(max-width=767px)">
+                <img class="team__img" 
+                alt="фото члена команди" 
+                  src="./images/member2-270.jpg"
                   alt="фото члена команди"
-                  width="270"
+                  
                 />
               </a>
               <div class="team__wrapper">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__position">Frontend Developer</p>
               </div>
+            </picture>
               <ul class="team__networks list">
                 <li class="team__network">
                   <a href="/" class="team__link">
@@ -278,16 +293,19 @@
 
             <li class="team__item">
               <a href="#">
-                <img
-                  src="./images/member3.jpg"
+                <picture>
+                  <source srcset="./images/member3-270.jpg 1x, ./images/member3-540.jpg 2x" media="(min-width:1200px)">
+                  <source srcset="./images/member3-354.jpg 1x, ./images/member3-708.jpg 2x" media=" (min-width:768px)">
+                  <source srcset="./images/member3-450.jpg 1x, ./images/member3-900.jpg 2x" media="(max-width=767px)">
+                <img class="team__img" 
+                  src="./images/member3-270.jpg"
                   alt="фото члена команди"
-                  width="270"
                 />
               </a>
               <div class="team__wrapper">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__position">Marketing</p>
-              </div>
+              </div></picture>
               <ul class="team__networks list">
                 <li class="team__network">
                   <a href="/" class="team__link">
@@ -321,16 +339,20 @@
             </li>
 
             <li class="team__item">
-              <a href="#"
-                ><img
-                  src="./images/member4.jpg"
+              <a href="#">
+                <picture>
+                  <source srcset="./images/member4-270.jpg 1x, ./images/member4-540.jpg 2x" media="(min-width:1200px)">
+                  <source srcset="./images/member4-354.jpg 1x, ./images/member4-708.jpg 2x" media=" (min-width:768px)">
+                  <source srcset="./images/member4-450.jpg 1x, ./images/member4-900.jpg 2x" media="(max-width=767px)">
+                <img class="team__img" 
+                  src="./images/member4-270.jpg"
                   alt="фото члена команди"
-                  width="270"
+                 
               /></a>
               <div class="team__wrapper">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__position">UI Designer</p>
-              </div>
+              </div></picture>
               <ul class="team__networks list">
                 <li class="team__network">
                   <a href="/" class="team__link">
@@ -364,7 +386,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Our Customer -->
       <section class="section customer">
         <div class="container customer__container">
