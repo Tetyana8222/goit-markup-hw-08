@@ -16,12 +16,20 @@
   flex-direction: row;
   text-align: center;
 }
-
+.work__card {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .work__thumb {
   position: relative;
   overflow: hidden;
 }
 .work__label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
   color: var(--accent-color2);

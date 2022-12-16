@@ -12,6 +12,7 @@
 }
 
 .team__item {
+  background-color: var(--accent-color2);
   width: 450px;
   border-radius: 4px;
   @media screen and (min-width: 768px) {
