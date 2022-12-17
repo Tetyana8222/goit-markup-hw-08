@@ -1276,53 +1276,51 @@ li.team__item {
     width: 100%;
   }
 }
-
-.project__name {
+@media screen and (min-width: 1200px) {
+  .project__set {
+    max-width: 370px;
+    width: 100%;
+  }
+}
+.project__set .project__name {
   font-weight: 700;
   font-size: 18px;
   color: var(--primary-title-color);
   margin-top: 20px;
   margin: 0px;
 }
-
-.project__explaination {
+.project__set .project__explaination {
   font-weight: 400;
   font-size: 16px;
   color: var(--primary-text-color);
   margin-top: 4px;
   margin-bottom: 0px;
 }
-
-.project__img {
+.project__set .project__img {
   display: block;
   width: 100%;
   height: auto;
 }
-
-.project__content {
+.project__set .project__content {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   padding: 20px 24px;
   text-align: left;
 }
-
-.project__name {
+.project__set .project__name {
   margin-top: 4px;
 }
-
-.project__case:hover .project__text {
+.project__set .project__case:hover .project__text {
   opacity: 1;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
-
-.project__thumb {
+.project__set .project__thumb {
   position: relative;
   overflow: hidden;
 }
-
-.project__text {
+.project__set .project__text {
   position: absolute;
   top: 0;
   left: 0;
