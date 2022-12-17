@@ -18,7 +18,58 @@
   <body>
     <!--Top Line-->
     <header class="header">
-      <div class="container header">
+      <div class="container header__container">
+        <a href="/" class="header__logo" lang="en"
+          ><span class="header__text">Web</span>Studio</a
+        >
+        <div class="menu">
+          <nav class="menu-nav">
+            <ul class="menu-nav__list list">
+              <li class="menu-nav__item">
+                <a href="./index.html" class="menu-nav__link">Студія</a>
+              </li>
+              <li class="menu-nav__item menu-nav__item_active">
+                <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
+              </li>
+              <li class="menu-nav__item">
+                <a href="./contacts.html" class="menu-nav__link"></a>Контакти
+              </li>
+            </ul>
+          </nav>
+          <div class="contact-nav">
+            <ul class="contact-nav__list list">
+              <li class="contact-nav__item">
+                <a href="tel:+380961111111" class="contact-nav__link">
+                  <svg class="contact-nav__icon" width="10" height="16">
+                    <use
+                      href="./images/symbol-defs.svg#icon-smartphone"
+                    ></use></svg
+                  >+38 096 111 11 11
+                </a>
+              </li>
+              <li class="contact-nav__item">
+                <a href="mailto:info@devstudio.com" class="contact-nav__link">
+                  <svg class="contact-nav__icon" width="16" height="12">
+                    <use
+                      href="./images/symbol-defs.svg#icon-envelope"
+                    ></use></svg
+                  >info@devstudio.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="24" height="24">
+            <use href="./images/symbol-defs.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- <div class="container header">
         <a href="/" class="header__logo" lang="en"><span class="header__text">Web</span>Studio</a>
         <nav class="menu-nav">
           <ul class="menu-nav__list list">
@@ -51,7 +102,7 @@
           </li>
         </ul>
       </div>
-      </div>
+      </div> -->
     </header>
     <main>
       <section class="section portfolio">
@@ -79,7 +130,7 @@
           <h2 class="visually-hidden">Портфоліо</h2>
           <ul class="project__list list">
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div  class="project__case">
                 <div class="project__thumb">
                 <img
                   src="./images/portfolio/project1.jpg"
@@ -91,12 +142,12 @@
                 </div>
                 <div class="project__content">
                 <h3 class="project__name">Технокряк</h3>
-                <p class="project">Веб-сайт</p>
+                <p class="project__explaination">Веб-сайт</p>
               </div> 
-              </a>
+              </div>
             </li>
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div class="project__case">
                <div class="project__thumb">
                 <img
                   src="./images/portfolio/project2.jpg"
@@ -109,12 +160,12 @@
               </div>
               <div class="project__content">
                 <h3 class="project__name">Постер New Orlean vs Golden Star</h3>
-                <p class="project">Дизайн</p>
+                <p class="project__explaination">Дизайн</p>
               </div>
-             </a>
+              </div>
             </li>
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div class="project__case">
                 <div class="project__thumb">
                 <img
                   src="./images/portfolio/project3.jpg"
@@ -128,10 +179,10 @@
                 <h3 class="project__name">Ресторан Seafood</h3>
                 <p class="project__explaination">Додаток</p>
               </div>
-              </a>
+              </div>
             </li>
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div class="project__case">
                 <div class="project__thumb">
                 <img
                   src="./images/portfolio/project4.jpg"
@@ -145,10 +196,10 @@
                 <h3 class="project__name">Проєкт Prime</h3>
                 <p class="project__explaination">Маркетинг</p>
               </div>
-              </a>
+              </div>
             </li>
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div class="project__case">
                 <div class="project__thumb">
                 <img
                   src="./images/portfolio/project5.jpg"
@@ -162,10 +213,10 @@
                 <h3 class="project__name">Проєкт Boxes</h3>
                 <p class="project__explaination">Додаток</p>
               </div>
-             </a>
+              </div>
             </li>
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div class="project__case">
                 <div class="project__thumb">
                 <img
                   src="./images/portfolio/project6.jpg "
@@ -179,10 +230,10 @@
                 <h3 class="project__name">Inspiration has no Borders</h3>
                 <p class="project__explaination">Веб-сайт</p>
               </div>
-             </a>
+              </div>
             </li>
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div class="project__case">
                 <div class="project__thumb">
                 <img
                   src="./images/portfolio/project7.jpg "
@@ -196,10 +247,10 @@
                 <h3 class="project__name">Видання Limited Edition</h3>
                 <p class="project__explaination">Дизайн</p>
               </div> 
-             </a>
+              </div>
             </li>
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div class="project__case">
                 <div class="project__thumb">
                 <img
                   src="./images/portfolio/project8.jpg"
@@ -213,10 +264,10 @@
                 <h3 class="project__name">Проєкт LAB</h3>
                 <p class="project__explaination">Маркетинг</p>
               </div>
-            </a>
+              </div>
             </li>
             <li class="project__set">
-              <a href="#" class="project__case">
+              <div class="project__case">
                 <div class="project__thumb">
                 <img
                   src="./images/portfolio/project9.jpg"
@@ -231,7 +282,7 @@
                 <h3 class="project__name">Growing Business</h3>
                 <p class="project__explaination">Додаток</p>
               </div>
-             </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -325,8 +376,5 @@
         </div>
       </div>
     </footer>
-  </body>
-</html>
-
   </body>
 </html>

@@ -728,6 +728,7 @@ body {
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  overflow: scroll;
 }
 
 .menu-container.is-open {
@@ -1202,11 +1203,14 @@ li.team__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 50px;
+  padding: 0 0 50px 0;
   margin: 0;
+  row-gap: 21px;
 }
 
 .filter__list {
@@ -1228,6 +1232,7 @@ li.team__item {
   font-size: 16px;
   padding: 6px 22px;
   border-radius: 4px;
+  cursor: pointer;
   -webkit-transition: background-color 250ms var(--transition-timing-function);
   transition: background-color 250ms var(--transition-timing-function);
 }
@@ -1253,8 +1258,8 @@ li.team__item {
 }
 
 .project__set {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+  max-width: 450px;
+  width: 100%;
   -webkit-transition: -webkit-box-shadow 250ms var(--transition-timing-function);
   transition: -webkit-box-shadow 250ms var(--transition-timing-function);
   transition: box-shadow 250ms var(--transition-timing-function);
@@ -1264,6 +1269,12 @@ li.team__item {
   border: 1px solid EEEEEE;
   -webkit-box-shadow: 1px 4px 6px 0 rgb(0, 0, 0), 0px 4px 4px 0px rgba(0, 0, 0, 0.6), 0px 1px 1px 0px rgb(0, 0, 0);
           box-shadow: 1px 4px 6px 0 rgb(0, 0, 0), 0px 4px 4px 0px rgba(0, 0, 0, 0.6), 0px 1px 1px 0px rgb(0, 0, 0);
+}
+@media screen and (min-width: 768px) {
+  .project__set {
+    max-width: 354px;
+    width: 100%;
+  }
 }
 
 .project__name {
