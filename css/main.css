@@ -341,18 +341,34 @@ body {
   margin-top: 20px;
   margin-bottom: 30px;
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.form__checkbox {
-  fill: transparent;
-  border: 1px solid var(--primary-title-color);
-  -webkit-transition: fill 250ms var(--transition-timing-function);
-  transition: fill 250ms var(--transition-timing-function);
+.agree-native {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
-.form__checkbox:hover {
-  fill: var(--accent-color);
-  stroke: var(--accent-color2);
-  border: none;
+
+.agree-custom {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.agree-native:checked + .agree-custom {
+  background-color: #2196f3;
+  border-color: #2196f3;
+  background-image: url(../images/checked.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .form__article {

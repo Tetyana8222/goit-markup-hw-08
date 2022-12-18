@@ -667,10 +667,16 @@
               class="form__textarea"
             ></textarea>
           </div>
-          <div class="form__agreement">
-            <svg class="form__checkbox" width="16" height="15">
-              <use href="./images/symbol-defs.svg#icon-check"></use>
-            </svg>
+          <div>
+          <label class="form__agreement">
+              <input type="checkbox" name="agree" class="agree-native"> 
+            <div class="agree-custom"></div>
+              <span class="form__article"
+              >Погоджуюся з розсилкою та приймаю
+              <a href="#" target="_blank" class="form__conditions"
+                >Умови договору</a>
+            </span></label>
+          
             <!-- <label for="checkbox-agreement">
               <input
                 id="checkbox-agreement"
@@ -679,12 +685,7 @@
                 type="checkbox"
                 required
               /> -->
-            <span class="form__article"
-              >Погоджуюся з розсилкою та приймаю
-              <a href="#" target="_blank" class="form__conditions"
-                >Умови договору</a
-              >
-            </span>
+           
           </div>
           <button type="submit" class="form__submit">Відправити</button>
         </form>
